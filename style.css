@@ -1,0 +1,324 @@
+body,
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Almonade;
+  src: url(assets/Fonts/Almonade.ttf);
+}
+
+@font-face {
+  font-family: Raumaly;
+  src: url(assets/Fonts/Raumaly.ttf);
+}
+@font-face {
+  font-family: OurStory;
+  src: url(assets/Fonts/OurStory.ttf);
+}
+
+.containerParallax {
+  /* The image used */
+  background-image: url("assets/images/rachel-carousel.jpg");
+
+  /* Full height */
+  margin-top: 5vh;
+  height: 63vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#buttons {
+  text-align: center;
+  /* margin-top: 20px; */
+}
+#copyright{
+  padding-left:14px;
+}
+
+#contactDetails{
+  padding-right:14px;
+}
+h1 {
+  padding-top: 13px;
+  padding-left: 19px;
+  font-family: OurStory;
+}
+.button {
+  font-family: OurStory;
+  font-size: 40px !important;
+  border: none !important;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+#paintingsButton,
+#contactButton {
+  text-decoration: none;
+  background-color: white;
+  padding: 5px;
+  border-radius: 12px;
+  outline: none !important;
+  border: 1px solid gray;
+  color: gray;
+}
+
+#paintingsButton:hover,
+#contactButton:hover {
+  background-color: gray;
+  color: white;
+}
+
+#aboutButton {
+  text-decoration: none;
+  background-color: white;
+  padding: 5px;
+  border-radius: 12px;
+  outline: none !important;
+  border: 1px solid darkred;
+  color: darkred;
+}
+#aboutButton:hover {
+  background-color: darkred;
+  color: white;
+}
+.aboutText {
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+}
+
+h6 {
+  line-height: 1.5;
+}
+
+#picturesGroup {
+  z-index: 10;
+  margin-top: 20px;
+  line-height: 0;
+  margin-bottom: 40px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.picturesGroup {
+  z-index: 10;
+  margin-top: 20px;
+  line-height: 0;
+  margin-bottom: 40px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.picturesGroup > img {
+  /* cursor: -webkit-zoom-in;
+  cursor: zoom-in; */
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#picturesGroup > img {
+  /* cursor: -webkit-zoom-in;
+  cursor: zoom-in; */
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#form {
+  /* display:none; */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  /* border: 1px solid black; */
+  background-color: #e4e4e2;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+form {
+  padding: 20px;
+}
+
+#picturesGroup {
+  display: none;
+}
+
+h4 {
+  text-align: center;
+  font-family: OurStory;
+  padding-top: 29px;
+  font-size: 43px;
+}
+
+.rachelPicturesTest {
+  cursor: pointer;
+}
+
+#toggle,
+.dropDown {
+  position: relative;
+  /* right:0;
+top:0; */
+}
+
+.dropDown {
+  display: none;
+  top: 23px;
+  background-color: white;
+}
+
+.dropDown > button {
+  display: block;
+  text-align: center;
+  margin: 41px auto;
+  padding-left: 27px;
+  padding-right: 27px;
+  border: none;
+  background-color: transparent;
+}
+
+#toggle {
+  height: 40px;
+  width: 30px;
+  background-color: white;
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.span {
+  height: 4px;
+  background: black;
+  margin: 3px;
+  width: 19px;
+}
+
+#contain {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+}
+
+.modalTest {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.modalBox {
+  /* background-color: white; */
+  margin-bottom: 6vh;
+  margin-top: 6vh;
+  height: 80vh;
+  width: auto;
+}
+
+#closeModalButton{
+  bottom: 90%;
+  height: 76px;
+  width: 77px;
+  font-size: 57px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+    left: 90%;
+}
+#closeModalButton:focus {outline:0;}
+
+.modal{
+  display:block;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  height: 40px;
+  width: 40px;
+  position: absolute;
+    left: 88%;
+    top: 50%;
+    
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  height: 40px;
+  width: 40px;
+  position: absolute;
+    right: 88%;
+    top: 50%;
+}
+.container{
+  margin-bottom:40px
+}
+
+#footer{
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  background-color:white
+}
+#footer > p {
+  margin:auto 0;
+}
+
+@media only screen and (max-width: 414px) {
+  #contain {
+    display: block;
+  }
+  #buttons {
+    display: none;
+  }
+}
