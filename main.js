@@ -3,6 +3,7 @@
         let display = "none";
         let chosenImage;
         let chosenIndex;
+        let date = new Date()
         let rachelImages = [
             "rachel-ehrenhalt-1",
             "rachel-ehrenhalt-2",
@@ -91,10 +92,22 @@
 
         });
 
-                //    About Content
-                function showAbout() {
+        //Footer 
+        $("#contactUs").click(function () {
+            $(".container").empty();
+            showForm();
 
-                    let about = ` <div class="aboutText">
+        });
+
+        // Get current year in footer
+        let year = `© ${date.getFullYear()}, Rachel Ehrenhalt. Powered by Daphne Levy & David-el Yosef`
+
+        $("#copyright").html(year);
+
+        //    About Content
+        function showAbout() {
+
+            let about = ` <div class="aboutText">
                     <h6>Rachel Ehrenhalt is a promising plastic arts graduate from the prestigious Bezalel Academy of Art in
                         Jerusalem
                         and is quickly emerging as one of the young new talents in the Israeli art scene. Ehrenhalt uses mainly
@@ -117,10 +130,10 @@
                         repeats the duplication. Now, as paintings, they cease to be private occurrences and become a spectacle.
                         Ehrenhalt’s artworks manage to arouse the curiosity of both the eye and the mind. </h6>
                 </div>`
-        
-                    $(".container").removeClass("picturesGroup").html(about);
-        
-                }
+
+            $(".container").removeClass("picturesGroup").html(about);
+
+        }
 
         // Function Display All Images
         function displayImages() {
@@ -247,10 +260,10 @@
             $(".modal").css("display", "none");
         });
 
-                //Form Content
-                function showForm() {
+        //Form Content
+        function showForm() {
 
-                    let newForm = `<div id="form">
+            let newForm = `<div id="form">
                     <h4>Be in touch!</h4>
                                 <form>
                                     <div class="form-group">
@@ -279,33 +292,33 @@
                                         <button class="btn btn-dark" id="submit" type="submit" value="Submit">Submit</button>               
                                 </form>
                             </div>`
-        
-                    $(".container").removeClass("picturesGroup").html(newForm);
-        
-                }
 
-             // Form conditions
-             $(".container").on("change", "#message", function () {
+            $(".container").removeClass("picturesGroup").html(newForm);
 
-                let messageValue = this.value;
-                let spanMessage = messageValue ? "" : "This field is required";
-                $("#errorMessage").html(spanMessage);
-            });
-    
-            $(".container").on("change", "#email", function () {
-    
-                let emailValue = this.value;
-                let spanEmail = emailValue ? "" : "Your email is required";
-                $("#emailMessage").html(spanEmail);
-            });
-    
-            $(".container").on("change", "#subject", function () {
-    
-                let subjectValue = document.getElementById("subject").value;
-                let spanSubject = subjectValue ? "" : "The subject is required";
-                $("#subjectMessage").html(spanSubject);
-    
-            });
+        }
+
+        // Form conditions
+        $(".container").on("change", "#message", function () {
+
+            let messageValue = this.value;
+            let spanMessage = messageValue ? "" : "This field is required";
+            $("#errorMessage").html(spanMessage);
+        });
+
+        $(".container").on("change", "#email", function () {
+
+            let emailValue = this.value;
+            let spanEmail = emailValue ? "" : "Your email is required";
+            $("#emailMessage").html(spanEmail);
+        });
+
+        $(".container").on("change", "#subject", function () {
+
+            let subjectValue = document.getElementById("subject").value;
+            let spanSubject = subjectValue ? "" : "The subject is required";
+            $("#subjectMessage").html(spanSubject);
+
+        });
 
 
         // Submit Form
