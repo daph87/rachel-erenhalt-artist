@@ -15,6 +15,21 @@ html {
 }
 
 @font-face {
+  font-family: Single;
+  src: url(assets/Fonts/Single\ Step.ttf);
+}
+
+@font-face {
+  font-family: sunflower;
+  src: url(assets/Fonts/Sunflower_PersonalUse.otf);
+}
+
+@font-face {
+  font-family: hat;
+  src: url(assets/fonts/RedHatDisplay-Regular.otf);
+}
+
+@font-face {
   font-family: Raumaly;
   src: url(assets/Fonts/Raumaly.ttf);
 }
@@ -55,8 +70,11 @@ h1 {
   font-family: OurStory;
 }
 .button {
-  font-family: OurStory;
-  font-size: 40px !important;
+  /* font-family: OurStory; */
+  font-family: sunflower;
+  /* font-family: single; */
+
+  font-size: 48px !important;
   border: none !important;
 }
 
