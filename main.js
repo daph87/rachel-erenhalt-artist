@@ -40,34 +40,41 @@
 
         // Display Images when loading the page
 
-        displayImages()
+        displayImages();
 
-
-        // Display Menu on mobile
-        $("#toggle").click(function () {
-
+        function toggle() {
             if (display === "none") display = "block";
             else display = "none";
 
             $(".dropDown").css("display", display);
+        }
+
+        // Display Menu on mobile
+        $("#toggle").click(function () {
+
+            toggle();
         })
 
         // Mobile DropDown
         $('#paintingsDropDown').click(function () {
             $(".container").empty();
-
-            displayImages()
+            displayImages();
+            
+            toggle();
         })
 
         $("#aboutDropDown").click(function () {
             $(".container").empty();
             showAbout();
+            
+            toggle();
         });
 
         $("#contactDropDown").click(function () {
             $(".container").empty();
             showForm();
-
+            
+            toggle();
         });
 
 
@@ -107,6 +114,7 @@
         //    About Content
         function showAbout() {
 
+            $('.up').remove();
             let about = ` <div class="aboutText">
                     <h6>Rachel Ehrenhalt is a promising plastic arts graduate from the prestigious Bezalel Academy of Art in
                         Jerusalem
@@ -143,7 +151,15 @@
                 $(".container").addClass("picturesGroup").append(allImages);
             });
 
+            // add button to slide up
+            let thumbUp = `<div class="up"><button title="slide up"></button></div>`
+            $("#bodyContainer").append(thumbUp);            
         }
+
+        // slide up function
+        $('.up').on('click', function () {
+            $('#bodyContainer')[0].scrollIntoView()
+        });
 
         // Modal of pictures when clicking on one picture
         $(".container").on("click", ".rachelPicturesTest", function () {
@@ -263,6 +279,7 @@
         //Form Content
         function showForm() {
 
+            $('.up').remove();
             let newForm = `<div id="form">
                     <h4>Be in touch!</h4>
                                 <form>
@@ -364,6 +381,5 @@
             }
         });
 
-
-    });
+    });    
 })();
